@@ -21,8 +21,8 @@ export type Props = {
   children: React.ReactNode;
 };
 
-const Title = (props: Props) => {
+const Title2 = (props: Props) => {
   return <Typography variant={props.variant}>{props.children}</Typography>;
 };
 
-export default Title;
+export default Title2;

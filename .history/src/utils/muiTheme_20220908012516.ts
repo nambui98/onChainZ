@@ -30,6 +30,13 @@ const components: any = createTheme(theme, {
       }
     }
   },
+  MuiTabs: {
+    styleOverrides: {
+      root: {
+        color: theme.palette.primary.main
+      }
+    }
+  },
   MuiButton: {
     //add variants to button component
     variants: [

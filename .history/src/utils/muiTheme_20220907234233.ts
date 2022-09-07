@@ -24,10 +24,8 @@ let theme = createTheme({
 
 const components: any = createTheme(theme, {
   MuiContainer: {
-    styleOverrides: {
-      root: {
-
-      }
+    sx: {
+      backgroundColor: "#0C1117"
     }
   },
   MuiButton: {

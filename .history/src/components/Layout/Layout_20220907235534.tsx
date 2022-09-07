@@ -1,17 +1,16 @@
-import { Box, Button, Container, Typography } from '@mui/material';
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import { Button } from '@mui/material';
+import * as React from 'react';
+import Navbar from '../Navbar/Navbar';
 
-import MyButton from '@/components/MyButton/MyButton';
-import ImageContainer from '@/containers/ImageContainer';
-import Title from '@/stories/Title/Title';
+import styles from './_layout.module.scss';
 
-const Home: NextPage = () => {
+type Props = {
+  children: React.ReactNode
+}
+
+const Layout = ({ children }: Props) => {
   return (
-    <>
-      <Head>
-        <title>Homepage | Your Website</title>
-      </Head>
+    <Container maxWidth='lg'>
       <Box>
         <Typography variant='h1' textAlign='center'>
           Welcome to
@@ -32,8 +31,9 @@ const Home: NextPage = () => {
       <Box>
         <Title variant='h4'>Helo From Storybook MUI</Title>
       </Box>
-    </>
-  );
-};
+    </Container>
 
-export default Home;
+  )
+}
+
+export default Layout

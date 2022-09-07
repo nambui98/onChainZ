@@ -26,7 +26,7 @@ const components: any = createTheme(theme, {
   MuiContainer: {
     styleOverrides: {
       root: {
-
+        backgroundColor: "#0C1117"
       }
     }
   },

@@ -18,18 +18,10 @@ let theme = createTheme({
     secondary: {
       main: '#ffffff',
     },
-
   },
 });
 
 const components: any = createTheme(theme, {
-  MuiContainer: {
-    styleOverrides: {
-      root: {
-
-      }
-    }
-  },
   MuiButton: {
     //add variants to button component
     variants: [

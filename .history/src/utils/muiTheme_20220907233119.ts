@@ -1,4 +1,4 @@
-import { green, orange } from '@mui/material/colors';
+import { green, orange, white } from '@mui/material/colors';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 /* * need to use module augmentation for the theme to accept the value that just added **/
@@ -16,20 +16,12 @@ let theme = createTheme({
       main: '#6F41FF',
     },
     secondary: {
-      main: '#ffffff',
+      main: white,
     },
-
   },
 });
 
 const components: any = createTheme(theme, {
-  MuiContainer: {
-    styleOverrides: {
-      root: {
-
-      }
-    }
-  },
   MuiButton: {
     //add variants to button component
     variants: [
@@ -47,13 +39,12 @@ const components: any = createTheme(theme, {
           backgroundColor: theme.palette.primary.main,
           border: `1px solid  ${theme.palette.primary.main}`,
           borderRadius: '8px',
-          transition: 'all .3s',
+          transition: 'all .5s',
           height: '38px',
           '&:hover': {
             color: theme.palette.primary.main,
             backgroundColor: 'transparent',
-            boxShadow: 'none',
-            borderColor: theme.palette.primary.main
+            boxShadow: 'none'
           }
         },
       },
@@ -64,14 +55,12 @@ const components: any = createTheme(theme, {
           backgroundColor: 'transparent',
           border: `1px solid  ${theme.palette.primary.main}`,
           borderRadius: '8px',
-          color: theme.palette.primary.main,
-          transition: 'all .3s',
+          transition: 'all .5s',
           height: '38px',
           '&:hover': {
             color: theme.palette.secondary.main,
             backgroundColor: theme.palette.primary.main,
-            boxShadow: 'none',
-            borderColor: theme.palette.primary.main
+            boxShadow: 'none'
           }
         },
       },

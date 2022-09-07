@@ -16,20 +16,12 @@ let theme = createTheme({
       main: '#6F41FF',
     },
     secondary: {
-      main: '#ffffff',
+      main: orange[500],
     },
-
   },
 });
 
 const components: any = createTheme(theme, {
-  MuiContainer: {
-    styleOverrides: {
-      root: {
-
-      }
-    }
-  },
   MuiButton: {
     //add variants to button component
     variants: [
@@ -46,32 +38,9 @@ const components: any = createTheme(theme, {
           textTransform: 'none',
           backgroundColor: theme.palette.primary.main,
           border: `1px solid  ${theme.palette.primary.main}`,
-          borderRadius: '8px',
-          transition: 'all .3s',
-          height: '38px',
           '&:hover': {
             color: theme.palette.primary.main,
             backgroundColor: 'transparent',
-            boxShadow: 'none',
-            borderColor: theme.palette.primary.main
-          }
-        },
-      },
-      {
-        props: { variant: 'outlined' },
-        style: {
-          textTransform: 'none',
-          backgroundColor: 'transparent',
-          border: `1px solid  ${theme.palette.primary.main}`,
-          borderRadius: '8px',
-          color: theme.palette.primary.main,
-          transition: 'all .3s',
-          height: '38px',
-          '&:hover': {
-            color: theme.palette.secondary.main,
-            backgroundColor: theme.palette.primary.main,
-            boxShadow: 'none',
-            borderColor: theme.palette.primary.main
           }
         },
       },
